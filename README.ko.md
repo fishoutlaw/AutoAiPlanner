@@ -19,7 +19,7 @@ AutoAiPlanner는 계정이나 백엔드 서버 없이 개인 계획을 정리할
 
 ## 라이브 데모
 
-아직 배포되지 않았습니다. [시작하기](#시작하기)를 따라 로컬에서 실행하세요.
+[GitHub Pages에서 AutoAiPlanner 열기](https://fishoutlaw.github.io/AutoAiPlanner/)
 
 ## 주요 기능
 
@@ -51,16 +51,20 @@ AutoAiPlanner는 계정이나 백엔드 서버 없이 개인 계획을 정리할
 
 별도 의존성을 설치하거나 빌드할 필요가 없습니다.
 
-1. 프로젝트를 다운로드하거나 복사합니다.
-2. 프로젝트 폴더에서 터미널을 엽니다.
-3. 앱 폴더로 이동한 뒤 정적 HTTP 서버를 실행합니다.
+1. 저장소를 복제하고 저장소 루트로 이동합니다.
 
 ```bash
-cd auto-ai-planner
+git clone https://github.com/fishoutlaw/AutoAiPlanner.git
+cd AutoAiPlanner
+```
+
+2. 정적 HTTP 서버를 실행합니다.
+
+```bash
 python -m http.server 8000
 ```
 
-4. 브라우저에서 `http://localhost:8000`을 엽니다.
+3. 브라우저에서 `http://localhost:8000`을 엽니다.
 
 Python을 사용할 수 없다면 다른 정적 파일 서버를 이용하세요. 로컬 기능만 사용할 때는 `index.html`을 직접 열 수도 있지만, 외부 AI 공급자가 브라우저 및 CORS 정책을 적용할 수 있으므로 HTTP 서버 실행을 권장합니다.
 
@@ -131,6 +135,7 @@ auto-ai-planner/
 ├─ index.html
 ├─ styles.css
 ├─ .gitignore
+├─ LICENSE
 ├─ README.md
 └─ README.ko.md
 ```
@@ -139,6 +144,7 @@ auto-ai-planner/
 - `styles.css`: 테마, 반응형 레이아웃, 컴포넌트, 모달, 달력 스타일
 - `app.js`: 상태, 저장, 렌더링, 달력 로직, AI 어댑터, 상호작용
 - `.gitignore`: Git에서 제외할 로컬·생성·백업·민감 파일
+- `LICENSE`: 저장소의 MIT 라이선스
 - `README.md`: 기본 영문 문서
 - `README.ko.md`: 한국어 문서
 
@@ -152,7 +158,6 @@ auto-ai-planner/
 - 브라우저 저장 용량과 사용자의 사이트 데이터 삭제로 인해 데이터가 손실될 수 있습니다.
 - 탭 사이 반영은 같은 브라우저 저장 영역에서만 동작하며 여러 기기에는 적용되지 않습니다.
 - 자동화된 테스트 스위트와 CI 파이프라인이 없습니다.
-- 확인된 호스팅 라이브 데모가 없습니다.
 
 ## 향후 개선
 
@@ -164,4 +169,4 @@ auto-ai-planner/
 - ICS 같은 표준을 이용한 달력 가져오기·내보내기
 - 정식 접근성 점검과 키보드 탐색 확대
 - 현재 한국어 UI를 넘어선 국제화
-- CI 검증과 공식 배포
+- CI 검증과 자동 배포 확인

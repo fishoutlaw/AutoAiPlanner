@@ -19,7 +19,7 @@ App data is stored locally in the browser. This makes the app easy to run, but i
 
 ## Live Demo
 
-Not deployed yet. Follow [Getting Started](#getting-started) to run it locally.
+[Open AutoAiPlanner on GitHub Pages](https://fishoutlaw.github.io/AutoAiPlanner/)
 
 ## Features
 
@@ -51,16 +51,20 @@ The app has no package installation, build step, framework, TypeScript runtime, 
 
 No dependencies need to be installed and no build is required.
 
-1. Download or copy the project.
-2. Open a terminal in the project directory.
-3. Move into the app folder and start a static HTTP server:
+1. Clone the repository and enter its root directory:
 
 ```bash
-cd auto-ai-planner
+git clone https://github.com/fishoutlaw/AutoAiPlanner.git
+cd AutoAiPlanner
+```
+
+2. Start a static HTTP server:
+
+```bash
 python -m http.server 8000
 ```
 
-4. Open `http://localhost:8000` in a browser.
+3. Open `http://localhost:8000` in a browser.
 
 If Python is unavailable, use another static file server. Opening `index.html` directly may work for local-only features, but an HTTP server is recommended because external AI providers can enforce browser and CORS policies.
 
@@ -131,6 +135,7 @@ auto-ai-planner/
 ├─ index.html
 ├─ styles.css
 ├─ .gitignore
+├─ LICENSE
 ├─ README.md
 └─ README.ko.md
 ```
@@ -139,6 +144,7 @@ auto-ai-planner/
 - `styles.css`: Themes, responsive layout, components, modals, and calendar styling
 - `app.js`: State, persistence, rendering, calendar logic, AI adapters, and interactions
 - `.gitignore`: Local, generated, backup, and sensitive files excluded from Git
+- `LICENSE`: MIT license for the repository
 - `README.md`: Primary English documentation
 - `README.ko.md`: Korean documentation
 
@@ -152,7 +158,6 @@ auto-ai-planner/
 - Browser storage capacity and user-initiated site-data clearing can cause data loss.
 - Cross-tab updates work only for the same browser storage area, not across devices.
 - There is no automated test suite or CI pipeline.
-- There is no verified hosted Live Demo.
 
 ## Future Improvements
 
@@ -164,4 +169,4 @@ The following items are possible future work and are not currently implemented:
 - Calendar import/export using standards such as ICS
 - A formal accessibility audit and expanded keyboard navigation
 - Internationalization beyond the current Korean interface
-- CI validation and an official deployment
+- CI validation and automated deployment checks
