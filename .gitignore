@@ -1,0 +1,25 @@
+# 운영체제 파일
+.DS_Store
+Thumbs.db
+
+# 편집기 설정
+.vscode/
+.idea/
+
+# 로그와 임시 파일
+*.log
+*.tmp
+*.bak
+
+# 로컬 환경과 비밀값
+.env
+.env.*
+!.env.example
+
+# 개인 백업 파일
+AutoAiPlanner-backup-*.json
+
+# 선택적 도구 생성물
+node_modules/
+dist/
+coverage/

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="자연어로 일정을 만들고 관리하는 AutoAiPlanner 디자인 프로토타입">
+  <title>AutoAiPlanner</title>
+  <link rel="stylesheet" href="styles.css?v=13">
+</head>
+<body>
+  <a class="skip-link" href="#app-main">본문으로 바로가기</a>
+
+  <div class="app-shell">
+    <!-- 사이드바 -->
+    <aside class="sidebar" aria-label="주요 메뉴">
+      <a class="brand" href="#dashboard" aria-label="AutoAiPlanner 대시보드">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span class="brand-copy"><strong>AutoAi</strong><span>Planner</span></span>
+      </a>
+
+      <nav class="side-nav">
+        <a href="#dashboard" data-route-link="dashboard"><span aria-hidden="true">⌂</span><span>대시보드</span></a>
+        <a href="#tasks" data-route-link="tasks"><span aria-hidden="true">☷</span><span>일정 목록</span></a>
+        <a href="#todos" data-route-link="todos"><span aria-hidden="true">☑</span><span>할 일</span></a>
+        <a href="#plans" data-route-link="plans"><span aria-hidden="true">◇</span><span>프로젝트</span></a>
+        <a href="#calendar" data-route-link="calendar"><span aria-hidden="true">□</span><span>달력</span></a>
+        <a href="#completed" data-route-link="completed"><span aria-hidden="true">✓</span><span>완료 일정</span></a>
+        <a href="#settings" data-route-link="settings"><span aria-hidden="true">⚙</span><span>설정</span></a>
+      </nav>
+
+      <div class="sidebar-foot">
+        <button class="theme-quick" type="button" data-action="toggle-theme" aria-label="테마 전환">
+          <span class="theme-symbol" aria-hidden="true">◐</span>
+          <span class="theme-label">다크 모드</span>
+        </button>
+        <div class="sidebar-profile" data-profile-display>
+          <span class="avatar" aria-hidden="true">MJ</span>
+          <span><strong data-profile-name>사용자</strong><small>나의 플래너</small></span>
+          <button class="profile-edit-button" type="button" data-action="edit-profile-name" aria-label="사용자 이름 수정">✎</button>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main-column">
+      <!-- 상단 바 -->
+      <header class="topbar">
+        <a class="mobile-brand" href="#dashboard" aria-label="AutoAiPlanner 홈">
+          <span class="brand-mark" aria-hidden="true">A</span>
+          <strong>AutoAiPlanner</strong>
+        </a>
+        <div class="topbar-context" aria-live="polite">
+          <span class="eyebrow">MY PLANNER</span>
+          <span id="topbar-title">대시보드</span>
+        </div>
+        <div class="topbar-actions">
+          <button class="icon-button" type="button" data-action="go-search" aria-label="일정 검색">⌕</button>
+          <button class="profile-button" type="button" data-action="edit-profile-name" aria-label="사용자 이름 수정"><span class="avatar" data-profile-avatar>사</span></button>
+        </div>
+      </header>
+
+      <!-- 동적 콘텐츠 영역 -->
+      <main id="app-main" tabindex="-1"></main>
+    </div>
+
+    <!-- 모바일 하단 내비게이션 -->
+    <nav class="bottom-nav" aria-label="모바일 주요 메뉴">
+      <a href="#dashboard" data-route-link="dashboard"><span aria-hidden="true">⌂</span><small>홈</small></a>
+      <a href="#tasks" data-route-link="tasks"><span aria-hidden="true">☷</span><small>일정</small></a>
+      <button class="bottom-add" type="button" data-action="open-add" aria-label="일정 추가"><span aria-hidden="true">＋</span><small>추가</small></button>
+      <a href="#todos" data-route-link="todos"><span aria-hidden="true">☑</span><small>할 일</small></a>
+      <button type="button" data-action="open-more" aria-label="더 보기"><span aria-hidden="true">•••</span><small>더보기</small></button>
+    </nav>
+  </div>
+
+  <!-- 모달과 상태 알림 영역 -->
+  <div id="modal-root"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  <div id="live-region" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="app.js?v=13"></script>
+</body>
+</html>
