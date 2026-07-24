@@ -16,7 +16,7 @@
   const API_PROFILE_SESSION_KEY = "autoAiPlanner.apiProfile.session";
   const OPENROUTER_MODELS_CACHE_KEY = "autoAiPlanner.openRouterModels.v4";
   const APP_DATA_VERSION = 3;
-  const DEFAULT_PROFILE_NAME = "민지";
+  const DEFAULT_PROFILE_NAME = "지민";
   const DEFAULT_DASHBOARD_HEADLINE = "중요한 일정과 다음 행동을 한눈에 확인하세요.";
   const DEFAULT_DASHBOARD_SUBTITLE = "오늘의 우선순위를 살펴보고, 할 수 있는 일부터 차근차근 시작해 보세요.";
   const DEFAULT_SCHEDULE_COLOR = "#6D5CE7";
